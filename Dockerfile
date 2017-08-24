@@ -65,6 +65,15 @@ RUN : \
     PyYAML \
     scipy \
     scikit-learn \
+    jupyter \
 
   # Clean Up
   && apk del .build-deps
+
+ADD jupyter_notebook_config.py /root/.jupyter
+
+EXPOSE 8888
+VOLUME /notebook
+WORKDIR /notebook
+
+CMD jupyter notebook
