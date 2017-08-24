@@ -59,6 +59,7 @@ RUN : \
   # Install Python Packages
   && pip --no-cache-dir install \
     matplotlib \
+    neologdn \
     numpy \
     pandas \
     PyYAML \
